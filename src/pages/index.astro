@@ -2,7 +2,17 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import '../styles/style.css';
+import homepageLogo from '/src/assets/homepage/homepage-logo.svg';
 import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
+import homepageGuaSha from '/src/assets/homepage/homepage-gua-sha.jpg';
+import homepageSchroepfen from '/src/assets/homepage/homepage-schroepfen.jpg';
+import homepageYoga from '/src/assets/homepage/homepage-yoga.jpg';
+import homepageDecoratedRoom from '/src/assets/homepage/homepage-decorated-beautiful-room.jpg';
+import homepageMassageRoom from '/src/assets/homepage/homepage-modern-massage-room.jpg';
+import homepageCoupleReceivingMassage from '/src/assets/homepage/homepage-couple-receiving-massage.jpg';
+import homepageMassagist from '/src/assets/homepage/homepage-trained-massagist.jpg';
+import homepageFaceRollers from '/src/assets/homepage/homepage-jade-face-rollers.jpg';
+import homepageBesitzerinFoto from '/src/assets/homepage/homepage-besitzerin-foto.jpg';
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
@@ -10,7 +20,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/yin-yang-massage/public/homepage-logo.svg" />
+        <link rel="icon" type="image/svg+xml" href={homepageLogo.src} />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content={Astro.generator} />
@@ -38,7 +48,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
         </header>
         <section>
           <div class="wrapper-hero">
-            <a href="/" class="logo-link"><img src="src/assets/homepage/homepage-logo.svg" alt="Logo" /></a>
+            <a href="/" class="logo-link"><img src={homepageLogo.src} alt="Logo" /></a>
             <h1>Yin-Yang-Massage Berlin</h1>
             <h2>Chinesische Massagetechniken für Ihre Gesundheit und Ihr Wohlbefinden.</h2>
             <a href="/">TERMIN BUCHEN</a>
@@ -142,7 +152,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
               
               <div class="treatment right">
                 <div class="treatment-image-wrapper">
-                  <img src="/src/assets/homepage/homepage-gua-sha.jpg" alt="Gua Sha" class="treatment-image">
+                  <img src={homepageGuaSha.src} alt="Gua Sha" class="treatment-image">
                 </div>
                   <div class="treatment-content">
                   <h3>Gua Sha</h3>
@@ -154,7 +164,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
               <div class="treatments-wrapper">
                 <div class="treatment">
                   <div class="treatment-image-wrapper">
-                    <img src="/src/assets/homepage/homepage-schroepfen.jpg" alt="Tuina Massage" class="treatment-image" />
+                    <img src={homepageSchroepfen.src} alt="Tuina Massage" class="treatment-image" />
                   </div>
                   <div class="treatment-content">
                     <h3>Schröpfen</h3>
@@ -165,7 +175,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
                 
                 <div class="treatment right">
                   <div class="treatment-image-wrapper">
-                    <img src="/src/assets/homepage/homepage-yoga.jpg" alt="Gua Sha" class="treatment-image">
+                    <img src={homepageYoga.src} alt="Gua Sha" class="treatment-image">
                   </div>
                     <div class="treatment-content">
                     <h3>Yoga</h3>
@@ -190,11 +200,11 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
               <div class="slider-wrapper" id="slider">
                 <button class="slider-btn prev-btn">&lt;</button>
                 <div class="slides">
-                  <img src="src/assets/homepage/homepage-decorated-beautiful-room.jpg" alt="Slider Image 1" />
-                  <img src="src/assets/homepage/homepage-modern-massage-room.jpg" alt="Slider Image 2" />
-                  <img src="src/assets/homepage/homepage-couple-receiving-massage.jpg" alt="Slider Image 3" />
-                  <img src="src/assets/homepage/homepage-trained-massagist.jpg" alt="Slider Image 4" />
-                  <img src="src/assets/homepage/homepage-jade-face-rollers.jpg" alt="Slider Image 5" />
+                  <img src={homepageDecoratedRoom.src} alt="Slider Image 1" />
+                  <img src={homepageMassageRoom.src} alt="Slider Image 2" />
+                  <img src={homepageCoupleReceivingMassage.src} alt="Slider Image 3" />
+                  <img src={homepageMassagist.src} alt="Slider Image 4" />
+                  <img src={homepageFaceRollers.src} alt="Slider Image 5" />
                 </div>
                 <button class="slider-btn next-btn">&gt;</button>
               </div>
@@ -206,7 +216,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
           <h2>Unser Job Ist unsere Philosophie</h2>
           <div class="about-us-container">
             <div class="about-us-content about-us-content-left">
-              <img src="src/assets/homepage/homepage-besitzerin-foto.jpg" alt="Yin-Yang-Massage Besitzerin" /> 
+              <img src={homepageBesitzerinFoto.src} alt="Yin-Yang-Massage Besitzerin" /> 
 
             </div>
 
@@ -248,7 +258,7 @@ import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
         <footer class="footer">
           <div class="footer-container">
             <div class="footer-column footer-logo">
-              <a href="/"><img src="src/assets/homepage/homepage-logo.svg" alt="Logo" /></a>
+              <a href="/"><img src={homepageLogo.src} alt="Logo" /></a>
             </div>
             
             <div class="footer-column footer-contact">
