@@ -1,11 +1,275 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Welcome to Astro! Everything between these triple-dash code fences
+// is your "component frontmatter". It never runs in the browser.
+import '../styles/style.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!-- Below is your "component template." It's just HTML, but with
+    some magic sprinkled in to help you build great templates. -->
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/yin-yang-massage/public/homepage-logo.svg" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content={Astro.generator} />
+        <script src="../scripts/carousel.js"></script>
+        <script src="../scripts/slider.js"></script>
+        <title>Yin-Yang-Massage | Erlebe die Kunst chinesischer Massagen</title>
+      </head>
+      <body>
+        <header class="header">
+          <nav class="nav-header">
+            <ul class="nav-header-list">
+              <li><a href="/yin-yang-massage">Home</a></li>
+              <li><a href="/yin-yang-massage">Behandlungen</a>
+                <ul class="nav-header-sublist">
+                  <li><a href="/yin-yang-massage/">Tuina Massage</a></li>
+                  <li><a href="/yin-yang-massage/">Gua Sha</a></li>
+                  <li><a href="/yin-yang-massage/">Schröpfen</a></li>
+                  <li><a href="/yin-yang-massage/">Yoga</a></li>
+                </ul>
+              </li>
+              <li><a href="/yin-yang-massage/">Über Uns</a></li>
+              <li><a href="/yin-yang-massage/">Kontakt</a></li>
+            </ul>
+          </nav>
+        </header>
+        <section>
+          <div class="wrapper-hero">
+            <a href="/" class="logo-link"><img src="src/assets/homepage/homepage-logo.svg" alt="Logo" /></a>
+            <h1>Yin-Yang-Massage Berlin</h1>
+            <h2>Chinesische Massagetechniken für Ihre Gesundheit und Ihr Wohlbefinden.</h2>
+            <a href="/">TERMIN BUCHEN</a>
+          </div>
+        </section>
+        <section class="testimonial-section">
+          <p><b>Google</b> Gesamtbewertung <b>4.8</b> von 5, basierend auf <a href="/">623 Bewertungen</a></p>
+          <div class="testimonial-container">
+            <div class="testimonial-wrapper">
+              <!-- Testimonial Items -->
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Sarah Miller</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Absolutely amazing experience! The facial treatment was so relaxing and my skin looks incredible. The staff is professional and friendly. Highly recommend!"</p>
+                <p class="review-date">Posted 2 days ago</p>
+              </div>
+        
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Michael Schmidt</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Best massage I've ever had! The atmosphere is so peaceful and the therapist really understood my needs. Will definitely return!"</p>
+                <p class="review-date">Posted 1 week ago</p>
+              </div>
+        
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Emma Weber</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Their anti-aging treatments are exceptional. I've been coming here for months and the results are amazing. The staff is knowledgeable and caring."</p>
+                <p class="review-date">Posted 2 weeks ago</p>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Peter Fischer</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Absolutely amazing experience! The facial treatment was so relaxing and my skin looks incredible. The staff is professional and friendly. Highly recommend!"</p>
+                <p class="review-date">Posted 3 days ago</p>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Harald Müller</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Absolutely amazing experience! The facial treatment was so relaxing and my skin looks incredible. The staff is professional and friendly. Highly recommend!"</p>
+                <p class="review-date">Posted 2 days ago</p>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h4>Stefanie Stefanos</h4>
+                    <div class="rating">★★★★★</div>
+                  </div>
+                </div>
+                <p class="review-text">"Absolutely amazing experience! The facial treatment was so relaxing and my skin looks incredible. The staff is professional and friendly. Highly recommend!"</p>
+                <p class="review-date">Posted 3 days ago</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Dots Navigation -->
+          <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </section>
+
+        <section class="treatments-section">
+          <div class="treatments-container">
+            <h2>Unsere Behandlungen</h2>
+            <p>Unsere Behandlungen helfen Ihnen, Körper und Geist in Einklang zu bringen. Durch gezielte Techniken und sanfte Pflege fördern wir Entspannung, Vitalität und Ihr ganzheitliches Wohlbefinden.</p>
+            
+            <div class="treatments-wrapper">
+              <div class="treatment">
+                <div class="treatment-image-wrapper">
+                  <img src="../assets/homepage/homepage-tuina-massage.jpg" alt="Tuina Massage" class="treatment-image" />
+                </div>
+                <div class="treatment-content">
+                  <h3>Tuina Massage</h3>
+                  <p>Entdecken Sie die wohltuende Kraft der traditionellen Tuina-Massage. Durch gezielte Grifftechniken fördert sie Entspannung, lindert Verspannungen und bringt Ihren Energiefluss ins Gleichgewicht. Erfahren Sie mehr über diese einzigartige Methode.</p>
+                  <a href="/">ZUR BEHANDLUNGSSEITE</a>
+                </div>
+              </div>
+              
+              <div class="treatment right">
+                <div class="treatment-image-wrapper">
+                  <img src="../assets/homepage/homepage-gua-sha.jpg" alt="Gua Sha" class="treatment-image">
+                </div>
+                  <div class="treatment-content">
+                  <h3>Gua Sha</h3>
+                  <p>Erleben Sie die revitalisierende Wirkung der traditionellen Gua Sha-Technik. Sanfte Schabbewegungen regen die Durchblutung an, lösen Verspannungen und fördern Ihre innere Balance. Erfahren Sie, wie Gua Sha Ihr Wohlbefinden nachhaltig steigern kann.</p>
+                  <a href="/">ZUR BEHANDLUNGSSEITE</a>
+                </div>
+              </div>
+            
+              <div class="treatments-wrapper">
+                <div class="treatment">
+                  <div class="treatment-image-wrapper">
+                    <img src="src/assets/homepage/homepage-schroepfen.jpg" alt="Tuina Massage" class="treatment-image" />
+                  </div>
+                  <div class="treatment-content">
+                    <h3>Schröpfen</h3>
+                    <p>Entdecken Sie die heilende Kraft des Schröpfens - eine jahrhundertealte Methode, die den Energiefluss harmonisiert und Verspannungen sanft löst. Diese einzigartige Technik unterstützt die Regeneration und bringt Ihren Körper ins Gleichgewicht.</p>
+                    <a href="/">ZUR BEHANDLUNGSSEITE</a>
+                  </div>
+                </div>
+                
+                <div class="treatment right">
+                  <div class="treatment-image-wrapper">
+                    <img src="/src/assets/homepage/homepage-yoga.jpg" alt="Gua Sha" class="treatment-image">
+                  </div>
+                    <div class="treatment-content">
+                    <h3>Yoga</h3>
+                    <p>Finden Sie Ruhe und innere Stärke durch unsere Yoga-Sitzungen. Mit achtsamen Bewegungen und gezielten Atemtechniken fördern Sie Flexibilität, Entspannung und ein gesteigertes Wohlbefinden - für Körper und Geist.</p>
+                    <a href="/">ZUR BEHANDLUNGSSEITE</a>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <section class="studio-section">
+          <div class="studio-container">
+            <div class="studio-content studio-content-left">
+              <h2>Unser Studio</h2>
+              <p>Wir bei Yin-Yang-Massage in Berlin heißen Sie in einer Umgebung willkommen, die speziell darauf ausgelegt ist, Ihnen Momente der Ruhe und Erholung zu schenken. Unser Studio vereint modernes Design mit einem Hauch fernöstlicher Tradition, um eine Atmosphäre der Harmonie und Entspannung zu schaffen. Hier können Sie dem Alltag entfliehen, neue Kraft tanken und sich von unserem erfahrenen Team rundum verwöhnen lassen. Besuchen Sie uns und erleben Sie, wie wohltuend ein Aufenthalt bei Yin-Yang-Massage sein kann.</p>
+              <a href="/">JETZT TERMIN BUCHEN</a>
+            </div>
+
+            <div class="studio-content studio-content-right">
+              <div class="slider-wrapper" id="slider">
+                <button class="slider-btn prev-btn">&lt;</button>
+                <div class="slides">
+                  <img src="src/assets/homepage/homepage-decorated-beautiful-room.jpg" alt="Slider Image 1" />
+                  <img src="src/assets/homepage/homepage-modern-massage-room.jpg" alt="Slider Image 2" />
+                  <img src="src/assets/homepage/homepage-couple-receiving-massage.jpg" alt="Slider Image 3" />
+                  <img src="src/assets/homepage/homepage-trained-massagist.jpg" alt="Slider Image 4" />
+                  <img src="src/assets/homepage/homepage-jade-face-rollers.jpg" alt="Slider Image 5" />
+                </div>
+                <button class="slider-btn next-btn">&gt;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-us-section">
+          <h2>Unser Job Ist unsere Philosophie</h2>
+          <div class="about-us-container">
+            <div class="about-us-content about-us-content-left">
+              <img src="src/assets/homepage/homepage-besitzerin-foto.jpg" alt="Yin-Yang-Massage Besitzerin" /> 
+
+            </div>
+
+            <div class="about-us-content about-us-content-right">
+              <h3>Über Mei</h3>
+              <p>
+                Mein Name ist Mei Lin, die Gründerin von Yin-Yang-Massage in Berlin. Inspiriert von der chinesischen Heilkunst, die ich von meiner Großmutter lernte, habe ich dieses Studio gegründet, um Menschen einen Ort der Entspannung und Harmonie zu bieten. Für mich und mein Team ist unser Beruf eine Leidenschaft – wir möchten Ihr Wohlbefinden fördern und Ihnen Momente der Ruhe schenken.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-section">
+          <div class="contact-container">
+            <div class="contact-content contact-content-left">
+              <h2>Kontaktieren Sie uns</h2>
+              <div class="contact-info adress-info">
+                <h3>Adresse</h3>
+                <p>Straße 123, 12345 Berlin</p>
+              </div>
+              <div class="contact-info opening-times">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 9:00 - 20:00 Uhr</p>
+                <p>Samstag: 10:00 - 18:00 Uhr</p>
+                <p>Sonntag: Geschlossen</p>
+              </div>
+              <div class="contact-info contact-numbers">
+                <p>Tel: <a href="tel:+4930123456">030 123456</a></p>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-content contact-content-right">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.697227387623!2d13.406844175646434!3d52.52081823617025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1f9014ffeb%3A0xc8fafc484349e4a1!2sBerliner%20Fernsehturm!5e0!3m2!1sde!2sde!4v1735924508043!5m2!1sde!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-column footer-logo">
+              <a href="/"><img src="src/assets/homepage/homepage-logo.svg" alt="Logo" /></a>
+            </div>
+            
+            <div class="footer-column footer-contact">
+              <h4>Kontakt</h4>
+              <p>Straße 123</p>
+              <p>12345 Berlin</p>
+              <p>Tel: <a href="tel:+4930123456">030 123456</a></p>
+              <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            
+            <div class="footer-column footer-nav">
+              <a href="/">Home</a>
+              <a href="/behandlungen">Behandlungen</a>
+              <a href="/ueber-uns">Über Uns</a>
+              <a href="/kontakt">Kontakt</a>
+            </div>
+            
+            <div class="footer-column footer-booking">
+              <a href="/termin">Termin Buchen</a>
+            </div>
+          </div>
+        </footer>
+
+      </body>
+    </html>
