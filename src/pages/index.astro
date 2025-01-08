@@ -2,6 +2,7 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import '../styles/style.css';
+import tuinaMassage from '/src/assets/homepage/homepage-tuina-massage.jpg';
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
@@ -130,7 +131,7 @@ import '../styles/style.css';
             <div class="treatments-wrapper">
               <div class="treatment">
                 <div class="treatment-image-wrapper">
-                  <img src="../assets/homepage/homepage-tuina-massage.jpg" alt="Tuina Massage" class="treatment-image" />
+                  <img src={tuinaMassage.src} alt="Tuina Massage" class="treatment-image" />
                 </div>
                 <div class="treatment-content">
                   <h3>Tuina Massage</h3>
@@ -141,7 +142,7 @@ import '../styles/style.css';
               
               <div class="treatment right">
                 <div class="treatment-image-wrapper">
-                  <img src="../assets/homepage/homepage-gua-sha.jpg" alt="Gua Sha" class="treatment-image">
+                  <img src="/src/assets/homepage/homepage-gua-sha.jpg" alt="Gua Sha" class="treatment-image">
                 </div>
                   <div class="treatment-content">
                   <h3>Gua Sha</h3>
@@ -153,7 +154,7 @@ import '../styles/style.css';
               <div class="treatments-wrapper">
                 <div class="treatment">
                   <div class="treatment-image-wrapper">
-                    <img src="src/assets/homepage/homepage-schroepfen.jpg" alt="Tuina Massage" class="treatment-image" />
+                    <img src="/src/assets/homepage/homepage-schroepfen.jpg" alt="Tuina Massage" class="treatment-image" />
                   </div>
                   <div class="treatment-content">
                     <h3>Schröpfen</h3>
